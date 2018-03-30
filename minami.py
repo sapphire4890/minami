@@ -8,7 +8,7 @@ from array import array
 Author:             LAW Willson King Tin (3035443342)
 Application Name:   Web Minami
 Creation Date:      27/2/2018
-Last Modified Date: 30/3/2018
+Last Modified Date: 31/3/2018
 """
 
 #deciding the path
@@ -49,6 +49,7 @@ try:
 except IndexError:
   print("Please enter a valid website URL, which have \"http://\" \"www.\" \".com\"")
 
+attempts = 0
 try:
   attempts = int(input("Enter a number of requests:\n"))
 
@@ -91,7 +92,9 @@ try:
 
   for r_time in range(num_Iteration):
     print("\"" + str(webName_array[r_time]) + "\"\t speed = \t\"" + str(web_timer[r_time]) + "\" s\n")
-
+    print("\"" + str(webName_array[r_time]) + "\"\t Avgerage = \t\"" + str((float(web_timer[r_time])/float(attempts))) + "\" s\n")
+    file.write("Avgerage: " + str((float(web_timer[r_time])/float(attempts))) + ',')
+    print('-----    -----   -----    -----    -----    -----')
 except requests.exceptions.SSLError:
   print("Can't connect to some websites, which require SSL certificate. \nLike http://hku.hk")
 
