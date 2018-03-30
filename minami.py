@@ -12,7 +12,7 @@ Last Modified Date: 31/3/2018
 """
 
 #deciding the path
-dir_path = os.path.dirname(os.path.realpath('__file__'))
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # Declare array, it's like vector in C++
 web_array = []
