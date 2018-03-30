@@ -92,8 +92,8 @@ try:
 
   for r_time in range(num_Iteration):
     print("\"" + str(webName_array[r_time]) + "\"\t speed = \t\"" + str(web_timer[r_time]) + "\" s\n")
-    print("\"" + str(webName_array[r_time]) + "\"\t Avgerage = \t\"" + str((float(web_timer[r_time])/float(attempts))) + "\" s\n")
-    file.write("Avgerage: " + str((float(web_timer[r_time])/float(attempts))) + ',')
+    print("\"" + str(webName_array[r_time]) + "\"\t Average = \t\"" + str((float(web_timer[r_time])/float(attempts))) + "\" s\n")
+    file.write("Average: " + str((float(web_timer[r_time])/float(attempts))) + ',')
     print('-----    -----   -----    -----    -----    -----')
 except requests.exceptions.SSLError:
   print("Can't connect to some websites, which require SSL certificate. \nLike http://hku.hk")
